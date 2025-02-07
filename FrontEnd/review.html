@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก</title>
+    <title>รีวิวร้าน</title>
     <link rel="icon" href="../Public/Logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -26,8 +26,43 @@
             </div>
         </div>
     </nav>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+
+    <div class="footer-box">
+        <h5>แนะนำสำหรับคุณ</h5>
+        <p></p>
+    </div>
+
+<footer class="footer mt-auto py-3 bg-light">  
+<div style="display: flex; justify-content: space-between;">
+    <span>
+        <a class="navbar-brand" href="Home.html">
+            <img src="../Public/Logo.png" class="text-center" alt="หาเพื่อนกินข้าว" height="50">
+        </a>
+    </span>
+    <span>
+         <p style="text-align: right;">Follow US</p>
+         <div class="social-icons">
+            <a href="https://www.facebook.com/MDRMarkalovDoomRody/"><img src="../Public/facebook-icon.png" alt="Facebook" class="social-icon"></a>
+            <a href="https://www.instagram.com/doom_rody/"><img src="../Public/instagram-icon.png" alt="Instagram" class="social-icon"></a>
+            <a href="https://line.me"><img src="../Public/vecteezy_line-png-icon_16716457.png" alt="Line" class="social-icon"></a>
+        </div>
+    </span>
+
+</div> 
+    <div style="display: flex; justify-content: space-between;">
+        <span class="footer-links">copyright© 2025 หาเพื่อนกินข้าว by Puripat & Thammavut All right reserved</span>
+        <span><a class="footer-links" href="Terms.html"><p>Terms & Conditions | Privacy Policy</p></a> </span>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("clearSearch").addEventListener("click", function() {
+        document.getElementById("searchInput").value = "";
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+
 </body>
 </html>
