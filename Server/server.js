@@ -1,4 +1,5 @@
 // Step 1: Import express
+const path = require('path'); // Importing path module
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
@@ -17,7 +18,7 @@ app.use('/auth', authRouter);
 app.use('/category', CategoryRouter);
 
 // Register routes from the routes directory
-readdirSync('./routes')
+readdirSync(path.join(__dirname, 'routes')) // Corrected path to use __dirname
 .map((c) => app.use('/api', require(`./routes/`+c)));
 
 // app.post('/api', (req, res) => {
@@ -26,5 +27,12 @@ readdirSync('./routes')
 //     res.send('Eat Together API');
 // });
 
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, "../FrontEnd")));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../FrontEnd/Home.html"));
+});
+
 // Step 2: Start the server
-app.listen(3000, () => console.log('Server is running on port 3000'));
+app.listen(3000, () => console.log('Server is running on http://localhost:3000/'));

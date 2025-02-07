@@ -1,0 +1,85 @@
+.feature-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* เอฟเฟกต์ Fade-In */
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* ทำให้แสดงผลเมื่อ Scroll มาถึง */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #2c9f45;
+}
+
+.highlight-text {
+    color: #ff9900;
+}
+
+.search-bar {
+    max-width: 400px;
+}
+
+.feature-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.feature-icons i {
+    font-size: 2rem;
+}
+
+.recommend-section {
+    background: #ffedcc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icon-link {
+    text-decoration: none !important;
+    color: black !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon-link img {
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.icon-link p {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black !important;
+    text-decoration: none !important;
+}

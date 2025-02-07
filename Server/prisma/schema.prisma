@@ -14,20 +14,20 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  password  String?
-  name      String?
-  propic    String?
-  coverpic  String?
-  role      String @default("user")
-  bio       String?
-  hobby     String?
-  address   String?
-  enabled   Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  reviews   Review[] @relation(name: "UserReviews")
+  id          String   @id @default(cuid())
+  email       String   @unique
+  password    String?
+  name        String?
+  propic      String?
+  coverpic    String?
+  role        String @default("user")
+  bio         String?
+  hobby       String?
+  address     String?
+  enabled     Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  reviews     Review[] @relation(name: "UserReviews")
 }
 
 model Restaurant {
@@ -44,15 +44,15 @@ model Restaurant {
 }
 
 model Review {
-  id          String   @id @default(cuid())
-  rating      Int
-  comment     String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  user        User     @relation(fields: [userId], references: [id], name: "UserReviews")
-  userId      String
-  restaurant  Restaurant @relation(fields: [restaurantId], references: [id], name: "RestaurantReviews")
-  restaurantId String
+  id            String   @id @default(cuid())
+  rating        Int
+  comment       String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  user          User     @relation(fields: [userId], references: [id], name: "UserReviews")
+  userId        String
+  restaurant    Restaurant @relation(fields: [restaurantId], references: [id], name: "RestaurantReviews")
+  restaurantId  String
 }
 
 model RestaurantCategory {
@@ -73,12 +73,13 @@ model Category {
 }
 
 model Message {
-  id          Int      @id @default(autoincrement())
-  matchId     Int
-  senderId    Int
-  receiverId  Int
-  content     String
-  createdAt   DateTime @default(now())
+  id            Int      @id @default(autoincrement())
+  matchId       Int
+  senderId      Int
+  receiverId    Int
+  content       String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
   @@index([matchId])
   @@index([senderId])
@@ -86,12 +87,37 @@ model Message {
 }
 
 model Match {
-  id        Int      @id @default(autoincrement())
-  user1Id   Int
-  user2Id   Int
-  createdAt DateTime @default(now())
-  status    String   @default("active")
+  id          Int      @id @default(autoincrement())
+  user1Id     Int
+  user2Id     Int
+  createdAt   DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  status      String   @default("active")
 
   @@index([user1Id])
   @@index([user2Id])
+}
+
+model Notification {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  content     String
+  read        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model Image {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  assetId     String
+  publicId    String
+  url         String
+  secureUrl   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
 }
