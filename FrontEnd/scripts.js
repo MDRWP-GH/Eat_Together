@@ -1,4 +1,15 @@
 import { createIcons, icons } from 'lucide';
+const API_BASE_URL = "http://localhost:5000";
+
+fetch(API_BASE_URL + "/api/restaurants")
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(restaurant => {
+            const img = document.createElement("img");
+            img.src = API_BASE_URL + "/uploads/" + restaurant.image; // ดึงรูปจาก Backend
+            document.body.appendChild(img);
+        });
+    });
 
 document.addEventListener("DOMContentLoaded", function() {
     fetchRestaurants(); // ดึงข้อมูลร้านอาหารเมื่อหน้าเว็บโหลดเสร็จ
