@@ -80,7 +80,7 @@ npx sequelize db:migrate
 ก่อนเริ่มต้นให้ติดตั้ง dependencies ทั้งใน Backend และ Frontend:
 
 ```bash
-cd Backend && npm install
+cd Server && npm install
 cd ../Frontend && npm install
 ```
 
