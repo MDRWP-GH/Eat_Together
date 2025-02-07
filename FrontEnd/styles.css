@@ -1,0 +1,167 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #ffe18f;
+    color: #333;
+}
+
+h5 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+
+.feature-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* เอฟเฟกต์ Fade-In */
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* ทำให้แสดงผลเมื่อ Scroll มาถึง */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar {
+    padding: 0rem 1rem;
+    min-height: 50px;
+}
+
+.navbar-brand img {
+    height: 150px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #2c9f45;
+}
+
+.highlight-text {
+    color: #ff9900;
+}
+
+.search-bar {
+    max-width: 400px;
+}
+
+.feature-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.feature-icons i {
+    font-size: 2rem;
+}
+
+.recommend-section {
+    background: #ffedcc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icon-link {
+    text-decoration: none !important;
+    color: black !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon-link img {
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.icon-link p {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.footer-box {
+    width: 80%;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ปรับขนาดปุ่ม Previous และ Next */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 100px; /* กำหนดความกว้างของปุ่ม */
+    height: 600px; /* กำหนดความสูงของปุ่ม */
+}
+
+/* ปรับขนาดไอคอนในปุ่ม */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px; /* ปรับขนาดไอคอน */
+    height: 30px; /* ปรับขนาดไอคอน */
+}
+
+/* Footer */
+.footer {
+    background: #ffedcc;
+    font-size: 20px;
+    padding: 20px 200px;
+    text-align: left;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: 50px;
+}
+
+.footer .social-icons {
+    margin: 10px 0;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer .social-icons img {
+    width: 60px;
+    height: 60px;
+}
+
+.footer-links {
+    font-size: 20px;
+    color: gray;
+}
+
+.right {
+    text-align: right;
+}
