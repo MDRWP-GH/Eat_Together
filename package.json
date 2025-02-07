@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "lucide": "^0.474.0"
+    "lucide": "^0.474.0",
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "node Server/server.js"
   }
 }

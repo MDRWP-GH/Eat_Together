@@ -38,7 +38,7 @@ const db = mysql.createConnection({
   
   // หน้า login
   app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'cookie', 'public', 'login.html'));
+    res.sendFile(path.join(__dirname, 'FrontEnd', 'Login.html'));
   });
   
   // Route สำหรับหน้า login
@@ -62,11 +62,11 @@ const db = mysql.createConnection({
   });
   
   // หน้า signup
-  app.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, 'cookie', 'public', 'signup.html'));
+  app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, 'FrontEnd', 'Register.html'));
   });
   // Route สำหรับการสมัครสมาชิก
-  app.post('/signup', (req, res) => {
+  app.post('/register', (req, res) => {
     const { username, password } = req.body;
   
     // ตรวจสอบหาก username หรือ password ว่าง
